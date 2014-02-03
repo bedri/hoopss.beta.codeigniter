@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|images|robots\.txt|css|javascript|uploads|favicon.ico|flash|kutuphane|larawel|ajax|test|connected)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+
+AddDefaultCharset utf-8
+AddCharset utf-8 .html .css .js .xml .json .rss .atom

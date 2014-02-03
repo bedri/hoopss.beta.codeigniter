@@ -1,0 +1,2 @@
+[05-Sep-2013 03:50:54 America/Chicago] PHP Fatal error:  Class 'Database' not found in /home/kristalt/public_html/hoopss/application/controllers/search.php on line 102
+[05-Sep-2013 05:06:18 America/Chicago] PHP Fatal error:  Call to undefined method CI_DB_mysql_driver::result() in /home/kristalt/public_html/hoopss/application/models/hoopssmodel.php on line 126

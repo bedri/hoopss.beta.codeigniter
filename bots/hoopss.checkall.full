@@ -1,0 +1,2 @@
+#!/bin/bash
+	php /var/www/vhosts/hoopss.com/httpdocs/bots/check_video_links.php 0; php /var/www/vhosts/hoopss.com/httpdocs/bots/check_archive_links.php 0; php /var/www/vhosts/hoopss.com/httpdocs/bots/check_document_links.php 0; php check_music_links.php 0;

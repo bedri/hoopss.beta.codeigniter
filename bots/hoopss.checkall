@@ -1,0 +1,5 @@
+#!/bin/bash
+for(( i=1; i < 100; i++ ))
+do
+	php check_music_links.php; php check_document_links.php; php check_archive_links.php; php check_video_links.php;
+done

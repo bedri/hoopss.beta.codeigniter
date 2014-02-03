@@ -1,0 +1,41 @@
+<!--
+	Hocam bu sana dönecek örnek xml. Bazıları senin gönderdiklerinin sağlama geri dönüşü (search type, keyword, os) ve diğerleri de scriptin ürettiği sonuçlar.
+	Senin sorgu urlsi şöyle olacak:
+	http://hoopss.com/ajax/qtsearch.php?keyword=sezen+aksu&search_type=music&os=Windows+7&file_type=ogg&page=2&increment=15
+	
+	Boşlukları + ile yer değiştiriyoruz.
+	@file_type string: search_type=music için mp3, ogg, wav, au, flac ya da wmv olabilir (document arıyorsan pdf, doc falan, video için avi, mpeg, mkv vb. ve archive için de zip, rar, tar, gz, bz2 falan dosya formatları sunabilirsin. Şimdilik sadece music için arama yapalım player olayında). Eğer gönderilmezse tüm formatlar döner.
+	@page int: 0 ile max_page arasında bir sayı. Eğer max_page'den daha büyük sayı verilirse max_page döner. Eğer gönderilmezse 0 döner.
+	@increment int: Kaç kayıt alınacağını bildiren değişken. Eğer gönderilmezse 15 kullanılır ve 15 döner.
+-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<results>
+	<search id="buraya md5 hash gelecek" type="buraya music, document, archive ya da video değişkenleri gelebilir" keyword="arama yapılan sözcük ya da sözcük grubu"></search>
+	<client os="istemcinin kurulu olduğu işletim sistemi" ip="istemcinin ipsini geri döndürüyoruz"></client>
+
+	<record id="veritabanindaki id alani">
+	<filesize unit="byte"> 6304445 </filesize> <!-- Dosya boyutu -->
+		<filetype>mp3</filetype> <!-- Dosya tipi. Formatlar: mp3, wmv, au, ogg, wav, flac -->
+		<filelink>http://home.danek.ru/MUSIC/The%20String%20Quartet%20Tributes/Dream%20Theater.%20[2007]%20The%20String%20Quartet%20Tribute%20To%20Dream%20Theater%20(192%20kbps)/08%20-%20Hell's%20Kitchen.mp3</filelink> <!-- Dosyanın direkt urlsi -->
+
+		<!-- Eğer dosya mp3 dosyası ise idtag tagı döner yoksa dönmez -->
+		<idtag>
+			<artist>The String Quartet</artist>
+			<title>Hell's Kitchen</title>
+			<album>The String Quartet Tribute To Dream Theater</album>
+			<year>2007</year>
+		</idtag>
+	</record>
+
+       <!-- Bunu da video örneği olarak koydum. archive ve document da böyle dönecek. Elbette aynı anda hem video hem müzik kaydı dönmez asla. Örnek için koydum buraya. -->
+       <record id="veritabanindaki id alani">
+		<filesize unit="byte"> 436755241 </filesize> <!-- Dosya boyutu -->
+		<filetype>avi</filetype> <!-- Dosya tipi. Formatlar: mp3, wmv, au, ogg, wav, flac -->
+		<filelink></filelink>
+       </record>
+
+	<paging>
+		<page>0</page>
+		<increment>15</increment>
+	</paging>
+</results>

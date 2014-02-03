@@ -1,0 +1,155 @@
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	color: #000000;
+	background-color: #ffffff;
+	font-family: Georgia, Verdana, Tahoma, Arial;
+}
+
+/*
+audio {
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    background-image: none;
+    background-color: red;            
+}
+*/
+
+#search_button {
+	width: 20px;
+	height: 26px;
+	font-size: 20px;
+	color: #009a9a;
+	display: inline-block;
+	vertical-align: middle;
+	border-collapse: collapse;
+}
+
+#login_button {
+	border: 1px solid #f95a19;
+	border-collapse: collapse;
+	background-color: #f95a19;
+	padding: 3px 7px 3px 7px;
+	color: white;
+}
+
+.searchbox {
+	width: 700px;
+	height: 24px;
+	font-size: 20px;
+	vertical-align: middle;
+	padding-left: 3px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#searchbox {
+	width: 700px;
+	height: 24px;
+	font-size: 20px;
+	vertical-align: middle;
+	padding-left: 2px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.button {
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #f95a19;
+}
+
+.wikiButton {
+    float: left;
+    background-color: #F95A19;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    border-collapse: collapse;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    font-family: verdana;
+    margin-top: 2px;
+}
+
+.floatingInfo {
+	font-size: 12px;
+	color: #ffffff;
+	padding: 15px;
+}
+
+.floatingInfo p {
+	margin-bottom: 3px;
+}
+
+.pagination {
+	text-align: center;
+	height: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #f95a19;
+}
+
+.pagination a {
+	color: #f95a19;
+}
+
+.paginationCurOpenTag {
+	border: 1px solid #F75F12;
+	margin-left: 3px;
+	background: #F75F12;
+	color: white;
+}
+
+.paginationArrows {
+	border: 1px solid #009a9a;
+	margin-left: 3px;
+	background: #009a9a;
+	color: white;
+}
+
+.footer {
+	width: 100%;
+	height: 30px;
+	font-weight: bold;
+	text-align: center;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	background: #009a9a;
+	color: #fff;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.footer span {
+	display: inline-block;
+	vertical-align: middle;
+}
+

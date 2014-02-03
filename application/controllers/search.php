@@ -90,20 +90,6 @@ class Search extends MY_Controller
 		$this->data['searchResults'] = $results;
 		$controlCount = (int)$this->data['totalRows'];
 
-		/*
-		$numberOfPages = ceil($controlCount / $increment) - 1;
-		$numberOfLastPageRecords = $controlCount % $increment;
-		
-		if(($page <= $numberOfPages) && ($page > 0)) $currentPage = (int)$page;
-		else if($page > $numberOfPages) $currentPage = $numberOfPages;
-		else $currentPage = 1;
-		
-		if($currentPage == 1) $previousPage = 1;
-		else $previousPage = $currentPage - 1;
-		
-		if($currentPage == $numberOfPages) $nextPage = $currentPage;
-		else $nextPage = $currentPage + 1;
-		*/
 		
 		if(!$controlCount) $numberOfRecordsFound = "No";
 		else $numberOfRecordsFound = $controlCount;
@@ -112,12 +98,6 @@ class Search extends MY_Controller
 		$this->data['numberOfRecordsFound'] = $numberOfRecordsFound;
 		
 
-		/*
-		$this->data['currentPage'] = $currentPage;
-		$this->data['numberOfPages'] = $numberOfPages;
-		$this->data['nextPage'] = $nextPage;
-		$this->data['previousPage'] = $previousPage;
-		*/
 				
 		$keywordString = $this->generateKeywordString();
 		$this->data['keywordString'] = $keywordString;

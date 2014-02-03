@@ -242,7 +242,7 @@
 		<div style="float: left; width: 4px;">&nbsp;</div>
 		<div style="float: left; position:relative; top: -4px;"><button style="padding-top: 3px; background: #fff; color: #009a9a; font-size: 9px; width: 22px; height: 23px; font-weight: bold; border-collapse: collapse; border: none;" id="random_rar" title="Random RAR search">rar</button></div>
 		<div style="float: left; width: 4px;">&nbsp;</div>
-		<div style="float: left; position:relative; top: -4px;"><img src="http://www.exporena.com/images/torrent_logo.png" style="padding-top: 3px; background: #fff; color: #009a9a; font-size: 9px; height: 20px; font-weight: bold; border-collapse: collapse; border: none;" id="random_torrent" title="Random torrent video search"></div>-->
+		<div style="float: left; position:relative; top: -4px;"><img src="http://www.exporena.com/images/torrent_logo.png" style="padding-top: 3px; background: #fff; color: #009a9a; font-size: 9px; height: 20px; font-weight: bold; border-collapse: collapse; border: none;" id="random_torrent" title="Random Torrent search"></div>-->
 		<div style="float: left; width: 4px;">&nbsp;</div>
 		<div style="float: left;"><img style="height: 19px;" src="<?php echo $baseUrl; ?>favicon.ico"></div>
 	</span>
@@ -382,21 +382,6 @@
 <script type="text/javascript" src="http://coinurl.com/script/jquery.cookie.js"></script>
 <script type="text/javascript" src="http://coinurl.com/script/md5.js"></script>
 
-<script type="text/javascript">
-  /*
-$(function() {
-    var id = "2fa7fdc714d115e041aad0992c8804b2";
-   
-    var url = encodeURIComponent(window.location.href);
-    var hash = CryptoJS.MD5(url);
-    if($.cookie('coinurl_' + hash) == null) {
-        var redirect = "http://coinurl.com/redirect.php?id=" + id + "&url=" + url;
-        $.cookie('coinurl_' + hash, true, {expires: 1});
-        top.location.assign(redirect);
-    }
-});
-  */
-</script>
  
 </body>
 </html>

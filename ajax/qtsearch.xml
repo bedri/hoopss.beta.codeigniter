@@ -1,12 +1,5 @@
 <!--
-	Hocam bu sana dönecek örnek xml. Bazıları senin gönderdiklerinin sağlama geri dönüşü (search type, keyword, os) ve diğerleri de scriptin ürettiği sonuçlar.
-	Senin sorgu urlsi şöyle olacak:
-	http://hoopss.com/ajax/qtsearch.php?keyword=sezen+aksu&search_type=music&os=Windows+7&file_type=ogg&page=2&increment=15
-	
-	Boşlukları + ile yer değiştiriyoruz.
-	@file_type string: search_type=music için mp3, ogg, wav, au, flac ya da wmv olabilir (document arıyorsan pdf, doc falan, video için avi, mpeg, mkv vb. ve archive için de zip, rar, tar, gz, bz2 falan dosya formatları sunabilirsin. Şimdilik sadece music için arama yapalım player olayında). Eğer gönderilmezse tüm formatlar döner.
-	@page int: 0 ile max_page arasında bir sayı. Eğer max_page'den daha büyük sayı verilirse max_page döner. Eğer gönderilmezse 0 döner.
-	@increment int: Kaç kayıt alınacağını bildiren değişken. Eğer gönderilmezse 15 kullanılır ve 15 döner.
+	This is the sample XML that will be returned from the query made to qtsearch.php
 -->
 <?xml version="1.0" encoding="UTF-8" ?>
 <results>

@@ -62,11 +62,19 @@ class Search extends MY_Controller
 		}
 
 		/* Pagination initialization */
-		$this->paginationLimit = 7;
+		$this->paginationLimit = 10;
 		
-		$config['total_rows'] = $this->HoopssModel->getResultsCount($searchType, $keyword);
-		$this->data['totalRows'] = $config['total_rows'];
+		$increment = $this->paginationLimit;
+		$results = $this->HoopssModel->getResults($searchType,$keyword,$offset,$increment);
+		$controlCount = (int)$results['total'];
 		
+		if($controlCount) 
+		{
+			$matches = $results['matches'];
+			$this->data['searchResults'] = $matches;
+		}
+		
+		$config['total_rows'] = $this->data['totalRows'] = $controlCount; //$this->HoopssModel->getResultsCount($searchType, $keyword);
 		$config['base_url'] = site_url("search/searchResults/$searchType/$keyword");
 		$config['per_page'] = $this->paginationLimit;
 		$config['num_links'] = 10;
@@ -84,23 +92,15 @@ class Search extends MY_Controller
 	
 		$this->data['searchType'] = $searchType;
 		$this->data['keyword'] = $keyword;
-		$increment = $this->paginationLimit;
 
-		$results = $this->HoopssModel->getResults($searchType,$keyword,$increment,$offset);
-		$this->data['searchResults'] = $results;
-		$controlCount = (int)$this->data['totalRows'];
-
-		
 		if(!$controlCount) $numberOfRecordsFound = "No";
 		else $numberOfRecordsFound = $controlCount;
 
 		$this->data['controlCount'] = $controlCount;
 		$this->data['numberOfRecordsFound'] = $numberOfRecordsFound;
-		
-
 				
 		$keywordString = $this->generateKeywordString();
-		$this->data['keywordString'] = $keywordString;
+		$this->data['keywordString'] = ""; //$keywordString;
 		
 		$this->load->view("header",$this->data);	
 		$this->load->view("searchResults",$this->data);

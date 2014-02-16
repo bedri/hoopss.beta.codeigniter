@@ -30,11 +30,10 @@ audio {
 #search_button {
 	width: 20px;
 	height: 26px;
-	font-size: 20px;
-	color: #009a9a;
-	display: inline-block;
-	vertical-align: middle;
-	border-collapse: collapse;
+	background: url('../images/hoopss_icon_h20px.png') no-repeat scroll center center rgba(0, 0, 0, 0); 
+	cursor: pointer;
+	float:right;
+	z-index:10;
 }
 
 #login_button {
@@ -52,16 +51,18 @@ audio {
 	vertical-align: middle;
 	padding-left: 3px;
 	font-family: Georgia, "Times New Roman", Times, serif;
+
 }
 
 #searchbox {
-	width: 700px;
+	width: 675px;
 	height: 24px;
 	font-size: 20px;
 	vertical-align: middle;
-	padding-left: 2px;
+	padding: 2px;
 	font-family: Georgia, "Times New Roman", Times, serif;
-}
+	z-index:9;
+	outline: none;}
 
 .button {
 	border-collapse: collapse;
@@ -146,6 +147,7 @@ a:hover {
 	color: #fff;
 	font-size: 12px;
 	display: inline-block;
+	z-index:2;
 }
 
 .footer span {

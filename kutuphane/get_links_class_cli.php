@@ -535,36 +535,32 @@ public function getFilesImage($url,$file_types,$keyword="") {
  
 	$files_array = $files[2];
 
-		foreach($files_array as $key_fa => $files_links)
+	foreach($files_array as $key_fa => $files_links)
+	{
+		$filename_array = explode(".",$files_links);
+		$file_extention = $filename_array[count($filename_array)-1];
+
+		if($key_fa && in_array($file_extention,$file_types))
 		{
-			$filename_array = explode(".",$files_links);
-			$file_extention = $filename_array[count($filename_array)-1];
+			$link = urldecode($url.$files_links);
+			/* Checking if file exists */
+			/* Check database records and if link does not exist insert else update enabled */
+			$link = addslashes($link);
+			$link = str_replace("'","",$link);
+			$video_que = $db->query("SELECT id FROM image WHERE link='$link' LIMIT 1;");
+			$record_check = $db->num_rows($video_que);
 
-			if($key_fa && in_array($file_extention,$file_types))
+
+			if(!$record_check && !strstr($link,"'") && !strstr($link,"%27"))
 			{
-
-				/* Checking if file exists */
 				if($filesize = (int)$curl->remoteFileExists($url.$files_links))
 				{
-					echo "\033[32m[$file_extention]\033[37m";
+					//echo "\033[32m[$file_extention]\033[37m";
 					$timestamp = time();
 
-					/* Check database records and if link does not exist insert else update enabled */
-
-					$link = urldecode($url.$files_links);
-					$link = addslashes($link);
-					$link = str_replace("'","",$link);
-					$video_que = $db->query("SELECT id FROM image WHERE link='$link';");
-					$record_check = $db->num_rows($video_que);
 
 
-					if(!$record_check && !strstr($link,"'") && !strstr($link,"%27"))
-					{
-
-
-						$db->query("INSERT INTO image (id,link,file_type,enabled,filesize,time) VALUES ('','$link','$file_extention','1','$filesize','$timestamp') ON DUPLICATE KEY UPDATE link='$link';");
-					}
-					else $db->query("UPDATE image SET enabled='1',link='$link',filesize='$filesize' WHERE link='$link';");
+					$db->query("INSERT INTO image (id,link,file_type,enabled,filesize,time) VALUES ('','$link','$file_extention','1','$filesize','$timestamp') ON DUPLICATE KEY UPDATE link='$link';");
 					echo "\033[32m[$file_extention]\033[37m $link --> Filesize: $filesize\n\r";
 				}
 				else
@@ -572,10 +568,10 @@ public function getFilesImage($url,$file_types,$keyword="") {
 					echo "\033[36m[DISABLED]\033[37m $link --> Filesize: $filesize\n\r";
 					$db->query("UPDATE image SET enabled='0' WHERE link='$link';");
 				}
-
 			}
+			else echo "\033[32m[EXISTS]\033[37m $link --> Filesize: $filesize\n\r";
 		}
-
+	}
 }
 
 

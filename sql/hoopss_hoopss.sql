@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `android` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `link_2` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12380 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `archive` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `link_2` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=374816 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `archive_google_site_links` (
   `time` int(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `link` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1803 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `cities` (
   `code` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `country` varchar(255) COLLATE utf8_unicode_ci DEFAULT 'T',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=79 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `code` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=306 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `document` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `link` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=870671 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `keywordbot` (
   `rank` int(20) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `keyword_2` (`keyword`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=372323 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -221,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `last_checked_site_id` (
   `torrent_last_id` int(10) unsigned NOT NULL,
   `android_last_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `time` int(20) DEFAULT NULL,
   `rank` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `music` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `link` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1749626 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -294,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `search_history` (
   `rank` int(20) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `keyword` (`keyword`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1567 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -326,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `torrent` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `link` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=112715 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -368,7 +368,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_2` (`id`,`username`),
   KEY `id` (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -386,7 +386,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `time` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `link` (`link`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=189654 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

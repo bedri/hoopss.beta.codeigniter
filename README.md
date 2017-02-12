@@ -1,5 +1,11 @@
-hoopss
-======
+hoopss.beta.codeigniter (Hoopss 2.0)
+
+IMPORTANT!!!
+This version is built in Codeigniter 2.1.2. It will cause a lot of problems with higher PHP versions so,
+1) Use this only with PHP 5.4
+2) If you want to use this with higher PHP versions, upgrade this to Codeigniter 3.1.3 or higher for compatibility.
+I do not have time to upgrade Codeigniter and since I am working on Laravel 5.4 version of Hoopss, I will not maintain this Hoopss version and repo with Codeigniter 2.1.2. New version of Hoopss (3.0) will be based on Laravel 5.4 and in development right now.
+==========
 
 Hoopss is a specialized search engine which collects links from open directories by use of it's bots and serve them in a search environment. Hoopss have search criterias as music, document, video, archive, image, android and torrent.
 
